@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#141B1F"
+    tools:context=".ResultActivity">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_win"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="76dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/cup" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_lose"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="76dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/lose" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="164dp"
+        android:layout_height="304dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/retry"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_win"
+        app:srcCompat="@drawable/child" />
+
+    <Button
+        android:id="@+id/exit"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="150dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFE400"
+        android:fontFamily="sans-serif"
+        android:text="Exit"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/retry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/retry"
+        app:layout_constraintTop_toBottomOf="@+id/retry"
+        app:rippleColor="#FF5722"
+        app:strokeColor="#043BFF"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/retry"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="150dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="#FFE400"
+        android:fontFamily="sans-serif"
+        android:text="Retry"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottie_win"
+        app:rippleColor="#FF5722"
+        app:strokeColor="#043BFF"
+        app:strokeWidth="6dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
